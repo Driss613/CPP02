@@ -49,57 +49,57 @@ const Fixed&	Fixed::operator=(const Fixed &hds)
 	return (*this);
 }
 
-bool	Fixed::operator>(const Fixed& hrs)
+bool	Fixed::operator>(const Fixed& hrs) const
 {
 	return (this->getRawBits() > hrs.getRawBits());
 }
 
-bool	Fixed::operator<(const Fixed& hrs)
+bool	Fixed::operator<(const Fixed& hrs) const
 {
 	return (this->getRawBits() < hrs.getRawBits());
 }
 
-bool	Fixed::operator>=(const Fixed& hrs)
+bool	Fixed::operator>=(const Fixed& hrs) const
 {
 	return (this->getRawBits() >= hrs.getRawBits());
 }
 
-bool	Fixed::operator<=(const Fixed& hrs)
+bool	Fixed::operator<=(const Fixed& hrs) const
 {
 	return (this->getRawBits() >= hrs.getRawBits());
 }
 
-bool	Fixed::operator==(const Fixed& hrs)
+bool	Fixed::operator==(const Fixed& hrs) const
 {
 	return (this->getRawBits() == hrs.getRawBits());
 }
 
-bool	Fixed::operator!=(const Fixed& hrs)
+bool	Fixed::operator!=(const Fixed& hrs) const
 {
 	return (this->getRawBits() != hrs.getRawBits());
 }
 
-bool	Fixed::operator+(const Fixed& hrs)
+bool	Fixed::operator+(const Fixed& hrs) const
 {
 	return (this->getRawBits() + hrs.getRawBits());
 }
 
-bool	Fixed::operator-(const Fixed& hrs)
+bool	Fixed::operator-(const Fixed& hrs) const
 {
 	return (this->getRawBits() - hrs.getRawBits());
 }
 
-bool	Fixed::operator*(const Fixed& hrs)
+bool	Fixed::operator*(const Fixed& hrs) const
 {
 	return (this->getRawBits() * hrs.getRawBits());
 }
 
-bool	Fixed::operator/(const Fixed& hrs)
+bool	Fixed::operator/(const Fixed& hrs) const
 {
 	return (this->getRawBits() / hrs.getRawBits());
 }
 
-Fixed&	Fixed::operator++(int)
+Fixed	Fixed::operator++(int)
 {
 	Fixed	tmp(*this);
 
@@ -111,7 +111,7 @@ Fixed&	Fixed::operator++()
 	this->_integer++;
 	return(*this);
 }
-Fixed&	Fixed::operator--(int)
+Fixed	Fixed::operator--(int)
 {
 	Fixed	tmp(*this);
 
